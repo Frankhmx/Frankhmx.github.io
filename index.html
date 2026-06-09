@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Personal Academic Homepage</title>
+    <style>
+        /* Modern & Clean Academic Style */
+        :root {
+            --primary-color: #2c3e50;
+            --text-color: #333333;
+            --light-bg: #f8f9fa;
+            --link-color: #3498db;
+            --accent-color: #e74c3c;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.7;
+            color: var(--text-color);
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: #ffffff;
+        }
+
+        /* Header / Biography Section */
+        header {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #eee;
+            margin-bottom: 40px;
+        }
+
+        @media (max-width: 600px) {
+            header { flex-direction: column; text-align: center; gap: 20px; }
+        }
+
+        .profile-pic {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--primary-color);
+            background-color: #ddd; /* Placeholder background */
+        }
+
+        .bio-info h1 {
+            margin: 0 0 10px 0;
+            font-size: 2.2rem;
+            color: var(--primary-color);
+        }
+
+        .bio-info p {
+            margin: 5px 0;
+            font-size: 1.1rem;
+        }
+
+        .social-links {
+            margin-top: 15px;
+        }
+
+        .social-links a {
+            margin-right: 15px;
+            color: var(--link-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .social-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* Section Styling */
+        section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 5px;
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+        }
+
+        /* Research Interests Tags */
+        .interests-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .tag {
+            background-color: var(--light-bg);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.95rem;
+            border: 1px solid #e0e0e0;
+            font-weight: 500;
+        }
+
+        /* Publications & Projects List */
+        ul.item-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        ul.item-list li {
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .item-title {
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: #111;
+        }
+
+        .authors {
+            font-size: 0.95rem;
+            color: #555;
+        }
+
+        .venue {
+            font-style: italic;
+            color: #666;
+        }
+
+        .me {
+            text-decoration: underline;
+            font-weight: bold;
+        }
+
+        /* Badge for code/PDF links */
+        .badge {
+            display: inline-block;
+            padding: 2px 8px;
+            font-size: 0.8rem;
+            background-color: #e3f2fd;
+            color: #0d47a1;
+            border-radius: 4px;
+            text-decoration: none;
+            margin-left: 5px;
+            font-weight: 500;
+        }
+        
+        .badge.code { background-color: #e8f5e9; color: #1b5e20; }
+        .badge:hover { opacity: 0.8; }
+
+        /* Figure / Workflow Diagram Container */
+        .figure-box {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: var(--light-bg);
+            border-radius: 8px;
+            text-align: center;
+            border: 1px dashed #ccc;
+        }
+
+        .figure-box img {
+            max-width: 100%;
+            height: auto;
+            /* SVG or high-resolution charts look great here */
+        }
+
+        .figure-caption {
+            font-size: 0.85rem;
+            color: #666;
+            margin-top: 8px;
+        }
+
+        footer {
+            margin-top: 60px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            font-size: 0.9rem;
+            color: #777;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="profile.jpg" alt="Your Name" class="profile-pic" onerror="this.src='https://via.placeholder.com/160?text=Photo'">
+        <div class="bio-info">
+            <h1>Your Name (你的名字)</h1>
+            <p>MPhil Student in Life Science / Bioinformatics</p>
+            <p>Department of Life Science</p>
+            <p>The Hong Kong University of Science and Technology</p>
+            
+            <div class="social-links">
+                <a href="mailto:your.email@connect.ust.hk">Email</a>
+                <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+                <a href="https://scholar.google.com/" target="_blank">Google Scholar</a>
+                <a href="https://orcid.org/" target="_blank">ORCID</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>
+            I am currently an MPhil student at the Department of Life Science, supervised by Prof. [Supervisor's Name]. My research lies at the intersection of computational biology and translational medicine. I am deeply interested in leveraging high-throughput multi-omics sequencing technologies to dissect complex biological processes.
+        </p>
+    </section>
+
+    <section id="interests">
+        <h2>Research Interests</h2>
+        <div class="interests-tags">
+            <span class="tag">🧬 Multi-omics Integration (Proteomics & Metabolomics)</span>
+            <span class="tag">🧫 Single-cell & Single-nucleus RNA Sequencing</span>
+            <span class="tag">⏳ Biology of Aging & Longevity</span>
+            <span class="tag">📊 Clinical Trial Data Analysis Pipeline</span>
+        </div>
+    </section>
+
+    <section id="publications">
+        <h2>Publications</h2>
+        <ul class="item-list">
+            <li>
+                <div class="item-title">Single-nucleus Transcriptomic Profiling Reveals Cellular Mechanisms of Kidney Aging in Non-human Primates</div>
+                <div class="authors"><span class="me">Your Name</span>, Co-author A, Senior Author*</div>
+                <div class="venue">Under Review / Journal Name, 2026.</div>
+                <a href="#" class="badge">Publisher Link</a>
+                <a href="#" class="badge code">Code & Data</a>
+            </li>
+            </ul>
+    </section>
+
+    <section id="projects">
+        <h2>Research Projects</h2>
+        
+        <div class="item-title">1. Multi-omics Evaluation of Exercise and Time-Restricted Eating (TRE)</div>
+        <p>
+            Investigating the combined dynamic effects of a 6-month lifestyle intervention on clinical phenotypes and multi-omics molecular profiles. We track multi-dimensional data across pre- and post-intervention time points to decode systemic biological responses.
+        </p>
+        
+        <div class="figure-box">
+            <div style="padding: 40px; background: #eef2f3; color: #7f8c8d; font-style: italic;">
+                [ High-Resolution Workflow Diagram Placeholder: Study Design / Pipeline Summary ]
+            </div>
+            <div class="figure-caption">Figure 1: Schematic diagram of the randomized controlled trial (RCT) and multi-omics integration workflow.</div>
+        </div>
+
+        <div class="item-title">2. Characterizing Retinal Ganglion Cells in Glaucoma Mouse Models</div>
+        <p>
+            Utilizing conditional gene knockout models to systematically analyze cell-type-specific transcriptional alterations during neurodegeneration.
+        </p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>
+            <strong>Office:</strong> Room XXX, Life Science Building, HKUST<br>
+            <strong>Email:</strong> your.email [at] connect.ust.hk <br>
+            <strong>GitHub:</strong> <a href="https://github.com/yourusername" style="color: var(--link-color);">@yourusername</a>
+        </p>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Your Name. Powered by GitHub Pages.</p>
+    </footer>
+
+</body>
+</html>
